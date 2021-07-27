@@ -6,7 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Penguin Fashion</title>
+
+    <!-- tailwind css -->
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- vanilla css -->
+    <style>
+        .hamburger:hover .nav-menu {
+            display: flex;
+        }
+    </style>
 
 </head>
 
@@ -14,7 +23,27 @@
 
     <header class="bg-yellow-100">
 
-        <section class="container lg:flex justify-around px-4 py-20 items-center">
+        <nav class="container flex justify-between px-4 lg:px-16 pt-8  items-center">
+            <div class="nav-logo">
+                <img class="w-48 lg:w-72" src="icons/Group 33072.png" alt="" />
+            </div>
+
+            <div class="lg:hidden hamburger">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </div>
+
+            <ul class="nav-menu hidden lg:flex">
+                <li class="menu-item mr-4 lg:mr-14">Home</li>
+                <li class="menu-item mr-4 lg:mr-14">Product</li>
+                <li class="menu-item mr-4 lg:mr-14">About Us</li>
+                <li class="menu-item">Contact</li>
+            </ul>
+        </nav>
+
+        <section class="container lg:flex justify-around px-4 pt-5 pb-20 items-center">
 
             <div class="space-y-6">
 
